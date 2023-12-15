@@ -60,7 +60,7 @@ class User extends Authenticatable
         return $this->belongsTo(City::class);
     }
 
-    public function prfile_ratings(){
+    public function profile_ratings(){
         
     }
     

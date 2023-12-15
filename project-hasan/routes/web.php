@@ -13,9 +13,31 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('account', function () {
+    return view('pages/account');
+});
+
+Route::get('login', function () {
+    return view('pages/login');
+});
+
+Route::get('passwordpage', function () {
+    return view('pages/passwordpage');
+
+});Route::get('portfolilo', function () {
+    return view('pages/portfolilo');
+});
+
+Route::get('hasan', function () {
+    return view('pages/profile');
+});
+
+Route::get('search', function () {
+    return view('pages/search');
+});
 
 Route::get('/', function () {
-    return view('pages/search');
+    return view('pages/welcome');
 });
 
 Route::get('/dashboard', function () {
