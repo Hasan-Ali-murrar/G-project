@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profile_Ratings;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
-class ProfileRatingsController extends Controller
+class ReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class ProfileRatingsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Profile_Ratings $profile_Ratings)
+    public function show(Review $review)
     {
         //
     }
@@ -42,7 +42,7 @@ class ProfileRatingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Profile_Ratings $profile_Ratings)
+    public function edit(Review $review)
     {
         //
     }
@@ -50,7 +50,7 @@ class ProfileRatingsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Profile_Ratings $profile_Ratings)
+    public function update(Request $request, Review $review)
     {
         //
     }
@@ -58,7 +58,7 @@ class ProfileRatingsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Profile_Ratings $profile_Ratings)
+    public function destroy(Review $review)
     {
         //
     }

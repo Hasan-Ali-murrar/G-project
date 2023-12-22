@@ -11,14 +11,6 @@
 </head>
 <body dir="rtl">
 
-
-
-
-
-
-
-
-
   <nav class="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
     <div class="flex items-center text-gray-900">
       <a
@@ -50,6 +42,7 @@
         </li>
       </ul>
       <div class="flex">
+        <a href="/register">
         <button
           class="middle none center mr-3 rounded-lg bg-sky-700 py-3 px-6 font-sans text-md font-bold uppercase text-white shadow-md shadow-sky-500/20 transition-all hover:shadow-lg hover:shadow-sky-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           data-ripple-light="true"

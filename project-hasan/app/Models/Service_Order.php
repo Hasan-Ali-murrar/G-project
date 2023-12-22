@@ -27,4 +27,7 @@ class Service_Order extends Model
     public function offer(){
          return $this->hasMany(Offer::class,'service_order_id');
     }
+    public function review(){
+        return $this->hasOne(Review::class);
+    }
 }

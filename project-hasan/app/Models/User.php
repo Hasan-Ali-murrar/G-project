@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\ProjectGallery;
 use App\Models\City;
-use App\Models\Profile_Rating;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -60,9 +60,9 @@ class User extends Authenticatable
         return $this->belongsTo(City::class);
     }
 
-    public function profile_ratings(){
-        
-    }
+   public function reviews(){
+    return $this->hasMany(Review::class);
+   }
     
     public function service(){
         return $this->belongsTo(Service::class);
