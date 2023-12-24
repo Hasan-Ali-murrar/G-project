@@ -16,16 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('account', function () {
     return view('pages/account');
 });
+Route::get("create_portfoilo",function(){
+    return view("pages/createPortfoilo");
+});
 
 Route::get('login', function () {
     return view('pages/login');
+});
+Route::get('notes', function () {
+    return view('pages/notes');
 });
 
 Route::get('passwordpage', function () {
     return view('pages/passwordpage');
 
-});Route::get('portfolilo', function () {
-    return view('pages/portfolilo');
+});Route::get('portfoilo', function () {
+    return view('pages/portfoilo');
 });
 
 Route::get('hasan', function () {
