@@ -83,6 +83,43 @@
     
 <!-- Main Content Start -->
 
+
+        <div class="w-full mt-[10rem] mr-[10rem] my-10 bg-white shadow-lg col-span-3 rounded px-8 pt-6 pb-8 mb-4">
+            <h2 class="block text-gray-700 text-xl font-bold mb-2">إدخال الأعمال السابقة</h2>
+            
+            <form action="#" method="post">
+                <!-- Project Description -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="project-description">
+                        وصف المشروع
+                    </label>
+                    <textarea id="project-description" name="project-description" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="project-image">
+                        رفع صورة
+                    </label>
+                    <input type="file" id="project-image" name="project-image" class="shadow border rounded w-full py-2 px-3 text-sky-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+
+                <!-- Completion Date -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="completion-date">
+                        تاريخ الإنهاء
+                    </label>
+                    <input type="date" id="completion-date" name="completion-date" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex items-center justify-between">
+                    <button class="bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                        إرسال
+                    </button>
+                </div>
+            </form>
+        </div>
     
 </body>
 </html>
