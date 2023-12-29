@@ -50,7 +50,7 @@ Route::get('/', function () {
     return view('pages/welcome');
 });
 
-Route::get('registerr',[CityController::class,'register']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -14,9 +14,10 @@ class CityController extends Controller
     public function register()
 
     {
-        $cities=City::get();
         $services=Service::all();
-        return view('auth/register',compact('cities','services'));
+        $cities=City::all();
+        
+        return view('auth.register');
     }
 
     /**

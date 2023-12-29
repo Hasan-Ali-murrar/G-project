@@ -23,7 +23,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $services=Service::all();
+        $cities=City::all();
+        return view('auth.register',compact('cities','services'));
     }
 
     /**
