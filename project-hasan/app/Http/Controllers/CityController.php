@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
@@ -10,9 +11,12 @@ class CityController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function register()
+
     {
-        //
+        $cities=City::get();
+        $services=Service::all();
+        return view('auth/register',compact('cities','services'));
     }
 
     /**

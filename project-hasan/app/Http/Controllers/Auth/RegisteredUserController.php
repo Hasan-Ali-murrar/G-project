@@ -39,18 +39,22 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'user_type'=>['required'],
-            'image'=>['image|max:1024'],
+            'city_id'=>['required'],
+            'service_id'=>['required'],
+            'service_desc'=>['required'],
+            
 
         ]);
         $image=$request->file('image');
-       // $image=store('uploads');
+        $imageName=time(). '.' .$image->getClientOriginalExtension();
+        $image->move(public_path('images'),$imageName);
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'phone'=>$request->phone,
             'user_type'=>$request->input('user_type','customer'),
-            'image'=>$image->hasName(),
+            'image'=>$request->image,
             'city_id'=>$request->city_id,
             'address'=>$request->address,
             'service_id'=>$request->service_id,

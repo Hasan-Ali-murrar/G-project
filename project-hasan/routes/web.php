@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Models\City;
@@ -49,7 +50,7 @@ Route::get('/', function () {
     return view('pages/welcome');
 });
 
-Route::get('register',[UserController::class,'register'])->name('register');
+Route::get('registerr',[CityController::class,'register'])->name('register');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -68,4 +69,4 @@ Route::get('test_cites',function (){
     dd($cities);
 });
 
-Route::get('test',[UserController::class,'test']);
+
