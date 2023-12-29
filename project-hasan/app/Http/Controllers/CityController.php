@@ -11,14 +11,7 @@ class CityController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function register()
 
-    {
-        $services=Service::all();
-        $cities=City::all();
-        
-        return view('auth.register');
-    }
 
     /**
      * Show the form for creating a new resource.
