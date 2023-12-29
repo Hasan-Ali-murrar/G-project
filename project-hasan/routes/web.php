@@ -50,7 +50,7 @@ Route::get('/', function () {
     return view('pages/welcome');
 });
 
-Route::get('registerr',[CityController::class,'register'])->name('register');
+Route::get('registerr',[CityController::class,'register']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -64,9 +64,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('test_cites',function (){
-    $cities=City::get();
-    dd($cities);
-});
 
 

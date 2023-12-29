@@ -99,8 +99,8 @@
                 {{ __('لدي حساب سابقا?') }}
             </a>
 
-            <x-primary-button class="ms-4">
-                {{ __('انشاء حساب') }}
+            <x-primary-button class="ms-4" >
+                {{ __('انشاء') }}
             </x-primary-button>
         </div>
 
