@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use Illuminate\Http\UploadedFile;
+use App\Models\Service;
 
 class RegisteredUserController extends Controller
 {
@@ -32,7 +33,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {   
-        $cities=City::get();
+        
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -42,7 +43,7 @@ class RegisteredUserController extends Controller
 
         ]);
         $image=$request->file('image');
-        $image=store('uploads');
+       // $image=store('uploads');
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -51,6 +52,9 @@ class RegisteredUserController extends Controller
             'user_type'=>$request->input('user_type','customer'),
             'image'=>$image->hasName(),
             'city_id'=>$request->city_id,
+            'address'=>$request->address,
+            'service_id'=>$request->service_id,
+            'service_desc'=>$request->service_desc,
 
            
         ]);
@@ -59,6 +63,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME,compact('cities'));
+        return redirect(RouteServiceProvider::HOME);
     }
 }

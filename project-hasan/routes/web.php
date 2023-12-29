@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
+use App\Models\City;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +49,8 @@ Route::get('/', function () {
     return view('pages/welcome');
 });
 
+Route::get('register',[UserController::class,'register'])->name('register');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -58,3 +62,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('test_cites',function (){
+    $cities=City::get();
+    dd($cities);
+});
+
+Route::get('test',[UserController::class,'test']);
