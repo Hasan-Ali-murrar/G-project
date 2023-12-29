@@ -100,7 +100,7 @@
             </a>
 
             <x-primary-button class="ms-4" >
-                {{ __('انشاء') }}
+                {{ __('Register') }}
             </x-primary-button>
         </div>
 
