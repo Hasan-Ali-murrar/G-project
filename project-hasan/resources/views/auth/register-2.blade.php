@@ -44,7 +44,7 @@
                 autocomplete="phone" />
             <x-input-error :messages="$errors->get('phone')" class="mt-2" />
         </div>
-
+    
         <!--Image-->
         <div class="mt-4">
             <x-input-label for="image" :value="__('image')" />
@@ -56,38 +56,11 @@
         <!--City-->
         <div class="mt-4">
             <x-input-label for="cities" :value="__('cities')" />
-            <select name="city_id">
-                @foreach($cities as $city)
-                <option value="{{$city->id}}">{{$city->city_name}}</option>
-                @endforeach
+            <select id="city_id" name="city_id">
+                <option value="" ></option>
             </select>
 
-            <x-input-error :messages="$errors->get('cities')" class="mt-2" />
-        </div>
-        <!--address -->
-        <div class="mt-4">
-            <x-input-label for="address" :value="__('address')" />
-            <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
-                required autocomplete="address" />
-            <x-input-error :messages="$errors->get('address')" class="mt-2" />
-        </div>
-        <!--Services-->
-        <div class="mt-4">
-            <x-input-label for="services" :value="__('services')" />
-            <select name="service_id">
-                @foreach($services as $service)
-                <option value="{{$service->service_id}}">{{$service->service_name}}</option>
-                @endforeach
-            </select>
-
-            <x-input-error :messages="$errors->get('services')" class="mt-2" />
-        </div>
-        <!--Service_desc -->
-        <div class="mt-4">
-            <x-input-label for="service_desc" :value="__('service_desc')" />
-            <x-text-input id="service_desc" class="block mt-1 w-full" type="text" name="service_desc" :value="old('service_desc')"
-                required autocomplete="service_desc" />
-            <x-input-error :messages="$errors->get('service_desc')" class="mt-2" />
+            <x-input-error :messages="$errors->get('image')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">

@@ -56,7 +56,7 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
             'phone'=>$request->phone,
             'user_type'=>$request->input('user_type','customer'),
-            'image'=>$request->image,
+            'image'=>'image',
             'city_id'=>$request->city_id,
             'address'=>$request->address,
             'service_id'=>$request->service_id,

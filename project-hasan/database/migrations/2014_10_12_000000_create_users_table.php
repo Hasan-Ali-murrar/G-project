@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('image');
             $table->integer('city_id');
             $table->string('address');
-            $table->string('service_id');
+            $table->integer('service_id');
             $table->string('service_desc');
             $table->rememberToken();
             $table->timestamps();
