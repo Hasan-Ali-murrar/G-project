@@ -61,6 +61,8 @@ class RegisteredUserController extends Controller
             'address'=>$request->address,
             'service_id'=>$request->service_id,
             'service_desc'=>$request->service_desc,
+
+           
         ]);
 
         event(new Registered($user));
